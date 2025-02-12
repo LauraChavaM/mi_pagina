@@ -1,0 +1,126 @@
+h1,
+h3 {
+    color: rgb(93, 62, 93);
+}
+
+h2,
+h4 {
+    color: rgb(122, 57, 88);
+}
+
+body {
+    padding-top: 60px;
+    background-color: rgb(228, 228, 240);
+    ;
+}
+
+.hero {
+    min-height: calc(100px + 5vh);
+    display: grid;
+    place-items: center;
+}
+
+.smImage{
+    height: 100px;
+    width: 80px;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animacion {
+    animation-name: slideInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+}
+
+
+/* Estilo del contenedor del popup */
+.popup {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Mostrar el popup */
+.popup.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+/* Animación de aparición */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.form__contact {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    margin-top: 100px;
+    padding: 2rem;
+    background-color: rgb(233, 233, 241);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form__contact label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: rgb(122, 57, 88);
+}
+
+.form__contact input[type="text"],
+.form__contact input[type="email"],
+.form__contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
